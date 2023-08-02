@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;500;600&display=swap');
+/*
+root biar bisa diakses di line manapun
+
+buat variabel untuk bisa dipanggil di css  contoh pemanggilan di description*/
+:root{
+    --main-color : #964b00
+}
+
+/*  * itu di emplentasi ke semua */
+html,
+body,
+* {
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+/* biasanya nama class itu di akhir */
+
+.my-nav {
+    background-color: black;
+    height: 80px;
+    font-size: 18px;
+
+}
+
+/* font weight itu untuk ngatur ketebalan */
+.navbar-brand {
+    font-size: 2.5em;
+    font-weight: 800;
+    letter-spacing: 3px;
+}
+
+/* em mengikuti rasio device, px tidak */
+.title {
+    font-size: 4em;
+    font-weight: 800;
+    letter-spacing: 5px;
+}
+
+/* ketebalan text biasanya 100-300 title 800 */
+.description {
+    font-size: 1.3em;
+    font-weight: 400;
+    letter-spacing: 2px;
+    /* color: #fdefff; */
+    /* color: black; */
+    color: var(--main-color);
+}
+
+/* no repeat biar gambar ga berulang
+   background size cover biar dia full
+*/
+.mybg{
+    background-image: url(/assets/husky_running.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 500px;
+}
+
+
+
+/* ganti font cari google font
+search font dan style yang diinginkan masukkan ke head
+atau pake import masuk ke css backup dandai kata yang di html ga bisa dipakai,
+implementasinya pakai aturan css yang dikasih di google font tadi juga ada
+*/
