@@ -1,205 +1,156 @@
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;500;600&display=swap');
-
 :root {
-    --main-color: #964b00;
+  --primary-color: #343a40; /* Warna utama latar belakang */
+  --secondary-color: #ffffff; /* Warna sekunder untuk teks */
+  --accent-color: #ffb3c1; /* Warna aksen */
+  --text-color: #000000; /* Warna teks */
+  --highlight-color: #f8d7da; /* Warna highlight */
 }
 
-html,
-body,
-* {
-    font-family: 'Josefin Sans', sans-serif;
-    margin: 0;
-    padding: 0;
+body {
+  font-family: "Josefin Sans", sans-serif;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  margin: 0;
+  padding: 0;
 }
 
-.bg-dark {
-    background-color: black;
-    color: white;
-}
-
-/* Navigasi */
 .my-nav {
-    background-color: black;
-    height: 80px;
-    font-size: 18px;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
 }
 
-.navbar-brand {
-    font-size: 2.5em;
-    font-weight: 800;
-    letter-spacing: 3px;
-}
-
-.navbar-nav .nav-link {
-    color: white;
-    transition: color 0.3s ease; /* Efek transisi warna saat hover */
-}
-
-.navbar-nav .nav-link:hover {
-    color: #964b00; /* Warna kontras saat hover */
-}
-/* Navigasi */
-
-
-/* Introduction Section */
 .mybg {
-    background-image: url(/assets/husky_running.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 500px;
-    opacity: 0.8; /* Opacity untuk efek transparansi */
+  background: url("/assets/husky_running.jpg") no-repeat center center/cover;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  opacity: 0.8;
 }
 
 .title {
-    font-size: 4em;
-    font-weight: 800;
-    letter-spacing: 5px;
-    color: white; /* Warna teks yang kontras dengan latar belakang */
+  font-weight: bold;
+  font-size: 3rem;
+  color: var(--secondary-color);
 }
 
 .description {
-    font-size: 1.3em;
-    font-weight: 400;
-    letter-spacing: 2px;
-    color: var(--main-color);
-}
-/* Introduction Section */
-
-/* Konten Produk */
-.row.text-center .col {
-    margin-bottom: 20px; /* Jarak antar kolom */
+  color: var(--secondary-color);
+  font-size: 1.2rem;
 }
 
-.row.text-center .col img {
-    border-radius: 50%; /* Bulatan pada gambar */
-    transition: transform 0.3s ease; /* Efek transisi saat hover */
+.content-product,
+.content-service {
+  padding: 2rem 0;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
 }
 
-.row.text-center .col img:hover {
-    transform: scale(1.1); /* Skala gambar saat hover */
-}
-
-.row.text-center .col h1 {
-    font-size: 1.5em;
-    font-weight: bold;
-    margin-top: 10px;
-}
-
-.row.text-center .col p {
-    font-size: 1em;
-    line-height: 1.4;
-}
-/* Konten Produk */
-
-
-/* Layanan */
-.row.text-center .col-md-4 {
-    margin-bottom: 30px; /* Tambahkan ruang antara setiap kolom layanan */
-  }
-  
-  .row.text-center .col-md-4 img {
-    width: 100%;
-    max-width: 280px; /* Maksimum lebar gambar agar tetap proporsional */
-    height: auto;
-    transition: transform 0.3s ease;
-  }
-  
-  .row.text-center .col-md-4 img:hover {
-    transform: scale(1.1);
-  }
-  
-  .row.text-center .col-md-4 h2 {
-    font-size: 1.8em;
-    font-weight: bold;
-    margin-top: 15px; /* Atur jarak atas antara judul dan teks */
-  }
-  
-  .row.text-center .col-md-4 p {
-    font-size: 1.1em;
-    line-height: 1.6;
-  }
-  /* Layanan */
-  
-
-
-/* Footer */
-/* Footer */
 footer {
-    background-color: #333;
-    color: white;
-    padding: 60px 0;
-}
-
-.container {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-.contact-info {
-    text-align: center;
-    margin-bottom: 30px;
-}
-
-.contact-info h2 {
-    font-size: 2.5em;
-    margin-bottom: 20px;
-}
-
-.contact-info p {
-    font-size: 1.1em;
-    line-height: 1.6;
-}
-
-.social-icons {
-    margin-top: 20px;
-    text-align: center;
+  background-color: var(--primary-color);
+  padding: 2rem 0;
+  color: var(--secondary-color);
 }
 
 .social-icons img {
-    margin-right: 10px;
-    width: 30px;
-    height: 30px;
-    transition: transform 0.3s ease;
-}
-
-.social-icons img:hover {
-    transform: scale(1.1);
+  width: 40px;
+  height: 40px;
+  margin: 0 10px;
 }
 
 @media (max-width: 768px) {
-    .contact-info h2 {
-        font-size: 2em; /* Mengurangi ukuran judul pada perangkat mobile */
-    }
+  .mybg {
+    height: auto;
+    padding: 2rem 0;
+  }
 
-    .contact-info p {
-        font-size: 1em; /* Mengurangi ukuran teks pada perangkat mobile */
-    }
-
-    .social-icons {
-        margin-top: 15px;
-    }
-
-    .social-icons img {
-        width: 25px;
-        height: 25px;
-    }
+  .col img {
+    width: 80px;
+    height: 80px;
+  }
 }
 
-@media (max-width: 576px) {
-    .container {
-        padding: 0 10px; /* Padding lebih kecil untuk perangkat dengan lebar layar lebih sempit */
-    }
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
 
-    .contact-info h2 {
-        font-size: 1.8em; /* Ukuran judul lebih kecil untuk perangkat sangat kecil */
-    }
+.nav-link {
+  font-size: 1rem;
+  color: var(--secondary-color);
+}
 
-    .contact-info p {
-        font-size: 0.9em; /* Ukuran teks lebih kecil untuk perangkat sangat kecil */
-    }
+.nav-link:hover {
+  color: var(--accent-color);
+}
+
+.content-product h1,
+.content-service h1 {
+  font-size: 2.5rem;
+  color: var(--secondary-color);
+}
+
+.content-product .description,
+.content-service .description {
+  font-size: 1.2rem;
+  color: var(--secondary-color);
+}
+
+.col h1,
+.col h2 {
+  font-size: 1.5rem;
+  color: var(--secondary-color);
+}
+
+.col p {
+  font-size: 1rem;
+  color: var(--secondary-color);
+}
+
+.contact-info {
+  margin-top: 2rem;
+}
+
+.contact-info h2 {
+  font-size: 2rem;
+  color: var(--secondary-color);
+}
+
+.contact-info p {
+  font-size: 1.2rem;
+  color: var(--secondary-color);
 }
 
 
-/* Footer */
+
+.social-icons a {
+  margin: 0 10px;
+  display: inline-block;
+}
+
+.social-icons img {
+    width: 40px;
+    height: 40px;
+    margin: 0 10px;
+    transition: transform 0.3s;
+}
+
+.social-icons img {
+  width: 40px;
+  height: 40px;
+  transition: transform 0.3s;
+}
+
+.social-icons img:hover {
+  transform: scale(1.1);
+}
+
+
+.bg-dark {
+    background-color: #343a40; /* Warna latar belakang gelap */
+    color: #ffffff; /* Warna teks untuk kontras yang baik */
+}
+
+.bg-gradient-dark {
+    background: linear-gradient(to right, #1e1e26, #212a3a); /* Gradient gelap dari kiri ke kanan */
+    color: #ffffff; /* Warna teks untuk kontras yang baik */
+}
