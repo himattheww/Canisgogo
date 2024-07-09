@@ -134,6 +134,7 @@ footer {
 .container {
     max-width: 1100px;
     margin: 0 auto;
+    padding: 0 20px;
 }
 
 .contact-info {
@@ -153,7 +154,7 @@ footer {
 
 .social-icons {
     margin-top: 20px;
-    text-align: center; /* Menengahkan ikon sosial media */
+    text-align: center;
 }
 
 .social-icons img {
@@ -168,8 +169,35 @@ footer {
 }
 
 @media (max-width: 768px) {
-    .contact-info {
-        text-align: center;
+    .contact-info h2 {
+        font-size: 2em; /* Mengurangi ukuran judul pada perangkat mobile */
+    }
+
+    .contact-info p {
+        font-size: 1em; /* Mengurangi ukuran teks pada perangkat mobile */
+    }
+
+    .social-icons {
+        margin-top: 15px;
+    }
+
+    .social-icons img {
+        width: 25px;
+        height: 25px;
+    }
+}
+
+@media (max-width: 576px) {
+    .container {
+        padding: 0 10px; /* Padding lebih kecil untuk perangkat dengan lebar layar lebih sempit */
+    }
+
+    .contact-info h2 {
+        font-size: 1.8em; /* Ukuran judul lebih kecil untuk perangkat sangat kecil */
+    }
+
+    .contact-info p {
+        font-size: 0.9em; /* Ukuran teks lebih kecil untuk perangkat sangat kecil */
     }
 }
 
