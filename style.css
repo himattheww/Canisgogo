@@ -1,67 +1,226 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;500;600&display=swap');
-/*
-root biar bisa diakses di line manapun
 
-buat variabel untuk bisa dipanggil di css  contoh pemanggilan di description*/
-:root{
-    --main-color : #964b00
+/* Root variables for easy theming */
+:root {
+    --main-color: #964b00;
 }
 
-/*  * itu di emplentasi ke semua */
-html,
-body,
-* {
+/* General styles for font and spacing */
+html, body, * {
     font-family: 'Josefin Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-/* biasanya nama class itu di akhir */
-
+/* Navbar styles */
 .my-nav {
     background-color: black;
     height: 80px;
     font-size: 18px;
-
 }
 
-/* font weight itu untuk ngatur ketebalan */
 .navbar-brand {
     font-size: 2.5em;
     font-weight: 800;
     letter-spacing: 3px;
 }
 
-/* em mengikuti rasio device, px tidak */
+/* Title and description styles */
 .title {
     font-size: 4em;
     font-weight: 800;
     letter-spacing: 5px;
 }
 
-/* ketebalan text biasanya 100-300 title 800 */
 .description {
     font-size: 1.3em;
     font-weight: 400;
     letter-spacing: 2px;
-    /* color: #fdefff; */
-    /* color: black; */
     color: var(--main-color);
 }
 
-/* no repeat biar gambar ga berulang
-   background size cover biar dia full
-*/
-.mybg{
+/* Background image style */
+.mybg {
     background-image: url(/assets/husky_running.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     height: 500px;
+    display: flex;
+    align-items: center;
 }
 
+/* Responsive styles */
+@media (max-width: 1200px) {
+    .navbar-brand {
+        font-size: 2em;
+    }
 
+    .title {
+        font-size: 3.5em;
+    }
 
-/* ganti font cari google font
-search font dan style yang diinginkan masukkan ke head
-atau pake import masuk ke css backup dandai kata yang di html ga bisa dipakai,
-implementasinya pakai aturan css yang dikasih di google font tadi juga ada
-*/
+    .description {
+        font-size: 1.2em;
+    }
+
+    .mybg {
+        height: 450px;
+    }
+}
+
+@media (max-width: 992px) {
+    .navbar-brand {
+        font-size: 1.8em;
+    }
+
+    .title {
+        font-size: 3em;
+    }
+
+    .description {
+        font-size: 1.1em;
+    }
+
+    .mybg {
+        height: 400px;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar-brand {
+        font-size: 1.5em;
+    }
+
+    .title {
+        font-size: 2.5em;
+    }
+
+    .description {
+        font-size: 1em;
+    }
+
+    .mybg {
+        height: 350px;
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .navbar-brand {
+        font-size: 1.2em;
+    }
+
+    .title {
+        font-size: 2em;
+    }
+
+    .description {
+        font-size: 0.9em;
+    }
+
+    .mybg {
+        height: 300px;
+    }
+
+    .col img {
+        width: 80px;
+        height: 80px;
+    }
+}
+
+/* Responsive styles for 425px */
+@media (max-width: 425px) {
+    .navbar-brand {
+        font-size: 1.1em;
+    }
+
+    .title {
+        font-size: 1.8em;
+    }
+
+    .description {
+        font-size: 0.85em;
+    }
+
+    .mybg {
+        height: 280px;
+        padding: 15px;
+    }
+
+    .col img {
+        width: 70px;
+        height: 70px;
+    }
+}
+
+/* Responsive styles for 375px */
+@media (max-width: 375px) {
+    .navbar-brand {
+        font-size: 1em;
+    }
+
+    .title {
+        font-size: 1.6em;
+    }
+
+    .description {
+        font-size: 0.8em;
+    }
+
+    .mybg {
+        height: 260px;
+        padding: 10px;
+    }
+
+    .col img {
+        width: 60px;
+        height: 60px;
+    }
+}
+
+/* Responsive styles for 320px */
+@media (max-width: 320px) {
+    .navbar-brand {
+        font-size: 0.9em;
+    }
+
+    .title {
+        font-size: 1.4em;
+    }
+
+    .description {
+        font-size: 0.75em;
+    }
+
+    .mybg {
+        height: 240px;
+        padding: 5px;
+    }
+
+    .col img {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+/* Card styles for services */
+.card {
+    margin-bottom: 20px;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+}
+
+/* Additional responsive styles for cards and content */
+@media (max-width: 768px) {
+    .card img {
+        width: 100%;
+        height: auto;
+    }
+}
