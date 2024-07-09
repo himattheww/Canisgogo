@@ -1,19 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;500;600&display=swap');
 
-/* Root variables for easy theming */
 :root {
     --main-color: #964b00;
 }
 
-/* General styles for font and spacing */
-html, body, * {
+html,
+body,
+* {
     font-family: 'Josefin Sans', sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
-/* Navbar styles */
+.bg-dark {
+    background-color: black;
+    color: white;
+}
+
+/* Navigasi */
 .my-nav {
     background-color: black;
     height: 80px;
@@ -26,11 +30,32 @@ html, body, * {
     letter-spacing: 3px;
 }
 
-/* Title and description styles */
+.navbar-nav .nav-link {
+    color: white;
+    transition: color 0.3s ease; /* Efek transisi warna saat hover */
+}
+
+.navbar-nav .nav-link:hover {
+    color: #964b00; /* Warna kontras saat hover */
+}
+/* Navigasi */
+
+
+/* Introduction Section */
+.mybg {
+    background-image: url(/assets/husky_running.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 500px;
+    opacity: 0.8; /* Opacity untuk efek transparansi */
+}
+
 .title {
     font-size: 4em;
     font-weight: 800;
     letter-spacing: 5px;
+    color: white; /* Warna teks yang kontras dengan latar belakang */
 }
 
 .description {
@@ -39,188 +64,114 @@ html, body, * {
     letter-spacing: 2px;
     color: var(--main-color);
 }
+/* Introduction Section */
 
-/* Background image style */
-.mybg {
-    background-image: url(/assets/husky_running.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 500px;
-    display: flex;
-    align-items: center;
+/* Konten Produk */
+.row.text-center .col {
+    margin-bottom: 20px; /* Jarak antar kolom */
 }
 
-/* Responsive styles */
-@media (max-width: 1200px) {
-    .navbar-brand {
-        font-size: 2em;
-    }
-
-    .title {
-        font-size: 3.5em;
-    }
-
-    .description {
-        font-size: 1.2em;
-    }
-
-    .mybg {
-        height: 450px;
-    }
+.row.text-center .col img {
+    border-radius: 50%; /* Bulatan pada gambar */
+    transition: transform 0.3s ease; /* Efek transisi saat hover */
 }
 
-@media (max-width: 992px) {
-    .navbar-brand {
-        font-size: 1.8em;
-    }
-
-    .title {
-        font-size: 3em;
-    }
-
-    .description {
-        font-size: 1.1em;
-    }
-
-    .mybg {
-        height: 400px;
-    }
+.row.text-center .col img:hover {
+    transform: scale(1.1); /* Skala gambar saat hover */
 }
 
-@media (max-width: 768px) {
-    .navbar-brand {
-        font-size: 1.5em;
-    }
-
-    .title {
-        font-size: 2.5em;
-    }
-
-    .description {
-        font-size: 1em;
-    }
-
-    .mybg {
-        height: 350px;
-        flex-direction: column;
-        text-align: center;
-        padding: 20px;
-    }
+.row.text-center .col h1 {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-top: 10px;
 }
 
-@media (max-width: 576px) {
-    .navbar-brand {
-        font-size: 1.2em;
-    }
+.row.text-center .col p {
+    font-size: 1em;
+    line-height: 1.4;
+}
+/* Konten Produk */
 
-    .title {
-        font-size: 2em;
-    }
 
-    .description {
-        font-size: 0.9em;
-    }
+/* Layanan */
+.row.text-center .col-md-4 {
+    margin-bottom: 30px; /* Tambahkan ruang antara setiap kolom layanan */
+  }
+  
+  .row.text-center .col-md-4 img {
+    width: 100%;
+    max-width: 280px; /* Maksimum lebar gambar agar tetap proporsional */
+    height: auto;
+    transition: transform 0.3s ease;
+  }
+  
+  .row.text-center .col-md-4 img:hover {
+    transform: scale(1.1);
+  }
+  
+  .row.text-center .col-md-4 h2 {
+    font-size: 1.8em;
+    font-weight: bold;
+    margin-top: 15px; /* Atur jarak atas antara judul dan teks */
+  }
+  
+  .row.text-center .col-md-4 p {
+    font-size: 1.1em;
+    line-height: 1.6;
+  }
+  /* Layanan */
+  
 
-    .mybg {
-        height: 300px;
-    }
 
-    .col img {
-        width: 80px;
-        height: 80px;
-    }
+/* Footer */
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 60px 0;
 }
 
-/* Responsive styles for 425px */
-@media (max-width: 425px) {
-    .navbar-brand {
-        font-size: 1.1em;
-    }
-
-    .title {
-        font-size: 1.8em;
-    }
-
-    .description {
-        font-size: 0.85em;
-    }
-
-    .mybg {
-        height: 280px;
-        padding: 15px;
-    }
-
-    .col img {
-        width: 70px;
-        height: 70px;
-    }
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
 }
 
-/* Responsive styles for 375px */
-@media (max-width: 375px) {
-    .navbar-brand {
-        font-size: 1em;
-    }
-
-    .title {
-        font-size: 1.6em;
-    }
-
-    .description {
-        font-size: 0.8em;
-    }
-
-    .mybg {
-        height: 260px;
-        padding: 10px;
-    }
-
-    .col img {
-        width: 60px;
-        height: 60px;
-    }
+.contact-info {
+    text-align: center;
+    margin-bottom: 30px;
 }
 
-/* Responsive styles for 320px */
-@media (max-width: 320px) {
-    .navbar-brand {
-        font-size: 0.9em;
-    }
-
-    .title {
-        font-size: 1.4em;
-    }
-
-    .description {
-        font-size: 0.75em;
-    }
-
-    .mybg {
-        height: 240px;
-        padding: 5px;
-    }
-
-    .col img {
-        width: 50px;
-        height: 50px;
-    }
-}
-
-/* Card styles for services */
-.card {
+.contact-info h2 {
+    font-size: 2.5em;
     margin-bottom: 20px;
 }
 
-.card img {
-    width: 100%;
-    height: auto;
+.contact-info p {
+    font-size: 1.1em;
+    line-height: 1.6;
 }
 
-/* Additional responsive styles for cards and content */
+.social-icons {
+    margin-top: 20px;
+    text-align: center; /* Menengahkan ikon sosial media */
+}
+
+.social-icons img {
+    margin-right: 10px;
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s ease;
+}
+
+.social-icons img:hover {
+    transform: scale(1.1);
+}
+
 @media (max-width: 768px) {
-    .card img {
-        width: 100%;
-        height: auto;
+    .contact-info {
+        text-align: center;
     }
 }
+
+
+/* Footer */
